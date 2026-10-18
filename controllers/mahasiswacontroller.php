@@ -1,5 +1,5 @@
 <?php
-class MahasiswaController
+class mahasiswacontroller
 {
     public function __construct(private Mahasiswa $model) {}
     
