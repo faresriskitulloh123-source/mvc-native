@@ -1,7 +1,7 @@
 <?php 
-require '../config/database.php'; 
+require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/../models/mahasiswa.php';
-require '../app/controllers/MahasiswaController.php'; 
+require_once __DIR__ . '/../controllers/mahasiswacontroller.php';
   
 $db = (new Database())->connect(); 
 $model = new Mahasiswa($db); 
