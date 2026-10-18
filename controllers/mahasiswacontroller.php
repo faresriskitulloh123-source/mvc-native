@@ -65,5 +65,3 @@ class MahasiswaController
     return $data;
   }
 }
-/
-?>
