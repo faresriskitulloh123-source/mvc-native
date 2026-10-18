@@ -1,5 +1,5 @@
 <?php
-class mahasiswacontroller
+class MahasiswaController
 {
     public function __construct(private Mahasiswa $model) {}
     
@@ -42,13 +42,19 @@ class mahasiswacontroller
     exit;
  }
 
-  public function delete(): void
-  {
+public function delete(): void
+{
     $id = (int) ($_POST['id'] ?? 0);
+
+    if ($id <= 0) {
+        exit('ID mahasiswa tidak valid.');
+    }
+
     $this->model->delete($id);
+
     header('Location: index.php?page=mahasiswa');
     exit;
-  }
+}
 
   private function validateInput(array $input): array
   {
